@@ -1,7 +1,7 @@
 %define name gimp-dbp
 %define version 1.1.5
 %define fversion %(echo %version|sed s/\\\\\./-/g)
-%define release %mkrel 1
+%define release %mkrel 2
 %define gimpdir %(gimptool-2.0 --gimpplugindir)
 %define oname dbp
 
@@ -10,6 +10,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://www.ozemail.com.au/~hodsond/%{oname}Src-%{fversion}.tar.bz2
+Patch: dbp-1.1.5-include.patch
 License: GPL
 Group: Graphics
 Url: http://members.ozemail.com.au/~hodsond/dbp.html
@@ -42,13 +43,14 @@ different directory.
 
 %prep
 %setup -q -n %oname-%version
+%patch -p1
 
 %build
 %make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -D -m 755 %oname %buildroot%gimpdir/%oname
+install -D -m 755 %oname %buildroot%gimpdir/plug-ins/%oname
 
 
 %clean
@@ -57,6 +59,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 %doc %oname.html *.png
-%gimpdir/%oname
+%_libdir/gimp/2.0/plug-ins/%oname
 
 
