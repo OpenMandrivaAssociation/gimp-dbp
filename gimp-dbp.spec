@@ -10,7 +10,6 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://www.ozemail.com.au/~hodsond/%{oname}Src-%{fversion}.tar.bz2
-Patch: dbp-1.1.5-include.patch
 License: GPL
 Group: Graphics
 Url: http://members.ozemail.com.au/~hodsond/dbp.html
@@ -43,10 +42,9 @@ different directory.
 
 %prep
 %setup -q -n %oname-%version
-%patch -p1
 
 %build
-%make
+%make NODEPS=""
 
 %install
 rm -rf $RPM_BUILD_ROOT
