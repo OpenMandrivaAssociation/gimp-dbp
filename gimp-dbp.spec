@@ -13,6 +13,7 @@ Source0: http://www.ozemail.com.au/~hodsond/%{oname}Src-%{fversion}.tar.bz2
 License: GPL
 Group: Graphics
 Url: http://members.ozemail.com.au/~hodsond/dbp.html
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gimp-devel
 Requires: gimp
 
