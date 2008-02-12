@@ -18,7 +18,6 @@ BuildRequires: gimp-devel
 Requires: gimp
 
 %description
-
 DBP (David's Batch Processor) is a simple batch processing plugin for
 the Gimp - it allows the user to automatically perform operations
 (such as resize) on a collection of image files. Its main advantage is
