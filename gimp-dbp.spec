@@ -1,7 +1,7 @@
 %define name gimp-dbp
-%define version 1.1.5
+%define version 1.1.8
 %define fversion %(echo %version|sed s/\\\\\./-/g)
-%define release %mkrel 2
+%define release %mkrel 1
 %define gimpdir %(gimptool-2.0 --gimpplugindir)
 %define oname dbp
 
@@ -9,8 +9,9 @@ Summary: David's Batch Processor for The GIMP
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://www.ozemail.com.au/~hodsond/%{oname}Src-%{fversion}.tar.bz2
-License: GPL
+Source0: http://www.ozemail.com.au/~hodsond/%{oname}Src-%{fversion}.tgz
+Patch: dbp-1.1.8-gcc-4.3.patch
+License: GPLv2+
 Group: Graphics
 Url: http://members.ozemail.com.au/~hodsond/dbp.html
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -41,6 +42,7 @@ different directory.
 
 %prep
 %setup -q -n %oname-%version
+%patch -p1
 
 %build
 %make NODEPS=""
