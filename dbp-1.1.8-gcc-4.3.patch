@@ -1,0 +1,11 @@
+diff -p -up dbp-1.1.8/op.cc~ dbp-1.1.8/op.cc
+--- dbp-1.1.8/op.cc~	2007-06-01 16:58:44.000000000 +0200
++++ dbp-1.1.8/op.cc	2008-06-11 12:19:54.000000000 +0200
+@@ -19,6 +19,7 @@
+ 
+ #include "op.h"
+ 
++#include <cstring>
+ #include <stdlib.h>
+ #include <sys/stat.h>
+ //#include <sstream>
