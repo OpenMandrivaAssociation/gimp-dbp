@@ -61,3 +61,41 @@ rm -rf $RPM_BUILD_ROOT
 %_libdir/gimp/2.0/plug-ins/%oname
 
 
+
+
+%changelog
+* Sun Aug 14 2011 Götz Waschk <waschk@mandriva.org> 1.1.8-3mdv2012.0
++ Revision: 694489
+- rebuild
+
+* Thu Aug 07 2008 Thierry Vignaud <tv@mandriva.org> 1.1.8-2mdv2011.0
++ Revision: 266845
+- rebuild early 2009.0 package (before pixel changes)
+
+* Wed Jun 11 2008 Götz Waschk <waschk@mandriva.org> 1.1.8-1mdv2009.0
++ Revision: 217907
+- new version
+- fix build with gcc 4.3
+- update license tag
+
+* Tue Feb 12 2008 Thierry Vignaud <tv@mandriva.org> 1.1.5-2mdv2008.1
++ Revision: 165949
+- fix spacing at top of description
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Sun Jun 10 2007 Götz Waschk <waschk@mandriva.org> 1.1.5-2mdv2008.0
++ Revision: 37897
+- fix plugin location (bug #31296)
+- fix build
+
+
+* Thu Jan 11 2007 Götz Waschk <waschk@mandriva.org> 1.1.5-1mdv2007.0
++ Revision: 107450
+- Import gimp-dbp
+
+* Thu Jan 11 2007 Götz Waschk <waschk@mandriva.org> 1.1.5-1mdv2007.1
+- initial package
+
