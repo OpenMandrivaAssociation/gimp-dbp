@@ -1,7 +1,7 @@
 %define name gimp-dbp
 %define version 1.1.8
 %define fversion %(echo %version|sed s/\\\\\./-/g)
-%define release %mkrel 3
+%define release 4
 %define gimpdir %(gimptool-2.0 --gimpplugindir)
 %define oname dbp
 
