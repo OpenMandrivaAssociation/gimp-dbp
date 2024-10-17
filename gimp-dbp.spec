@@ -13,7 +13,7 @@ Source0: http://www.ozemail.com.au/~hodsond/%{oname}Src-%{fversion}.tgz
 Patch: dbp-1.1.8-gcc-4.3.patch
 License: GPLv2+
 Group: Graphics
-Url: http://members.ozemail.com.au/~hodsond/dbp.html
+Url: https://members.ozemail.com.au/~hodsond/dbp.html
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gimp-devel
 Requires: gimp
