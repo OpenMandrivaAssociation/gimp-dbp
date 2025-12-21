@@ -15,6 +15,7 @@ License: GPLv2+
 Group: Graphics
 Url: https://members.ozemail.com.au/~hodsond/dbp.html
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	make
 BuildRequires: gimp-devel
 Requires: gimp
 
